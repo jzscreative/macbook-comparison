@@ -3,30 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MacBook Comparison</title>
+<title>MacBook Comparison for Danielle</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f0; padding: 24px; color: #1a1a1a; }
   h1 { font-size: 18px; font-weight: 500; color: #444; margin-bottom: 20px; }
   .wrap { overflow-x: auto; }
-  table { border-collapse: collapse; width: 100%; min-width: 700px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #eee; vertical-align: top; }
-  th { font-size: 12px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.04em; background: #fafafa; }
-  th.josh { background: #EBF4FF; color: #185FA5; border-top: 3px solid #378ADD; }
-  td.josh { background: #EBF4FF; color: #185FA5; }
-  td:first-child, th:first-child { font-size: 11px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; width: 100px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 860px;
+    table-layout: fixed;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  col.lc { width: 88px; }
+  col.dc { width: calc((100% - 88px) / 6); }
+  col.jc { width: calc((100% - 88px) / 6); }
+  th, td {
+    padding: 11px 11px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  th {
+    font-size: 11px; font-weight: 600; color: #888;
+    text-transform: uppercase; letter-spacing: 0.03em;
+    background: #fafafa; line-height: 1.4;
+  }
+  th.j { background: #EBF4FF; color: #185FA5; border-top: 3px solid #378ADD; }
+  td.j { background: #EBF4FF; color: #185FA5; }
+  td:first-child, th:first-child {
+    font-size: 10px; font-weight: 600; color: #bbb;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
   tbody tr:last-child td { border-bottom: none; }
-  .price { font-size: 20px; font-weight: 600; color: #1a1a1a; }
-  td.josh .price { color: #185FA5; }
-  .sub { display: block; font-size: 11px; color: #999; margin-top: 3px; }
-  td.josh .sub { color: #4d8fc4; }
-  .badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 9px; border-radius: 20px; }
-  .new { background: #e8f7ee; color: #1a7a45; }
+  .price { font-size: 18px; font-weight: 600; color: #1a1a1a; }
+  td.j .price { color: #185FA5; }
+  .sub { display: block; font-size: 11px; color: #999; margin-top: 3px; line-height: 1.4; }
+  td.j .sub { color: #4d8fc4; }
+  .spec { display: block; font-size: 10px; color: #bbb; margin-top: 4px; line-height: 1.5; }
+  td.j .spec { color: #7ab3d9; }
+  .badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  .new    { background: #e8f7ee; color: #1a7a45; }
   .refurb { background: #fff4e0; color: #9a6200; }
-  .ref { background: #dbeeff; color: #185FA5; }
-  .bar-track { margin-top: 8px; height: 5px; background: #eee; border-radius: 3px; width: 100%; }
-  .bar-fill { height: 5px; border-radius: 3px; }
-  .note { font-size: 11px; color: #bbb; margin-top: 16px; }
+  .ref    { background: #dbeeff; color: #185FA5; }
+  .buy-link {
+    display: inline-block; font-size: 11px; font-weight: 500;
+    color: #185FA5; text-decoration: none;
+    border-bottom: 1px solid #b5d4f4; line-height: 1.5;
+  }
+  .buy-link:hover { color: #0c447c; border-color: #0c447c; }
+  .bar-track { margin-top: 7px; height: 5px; background: #eeeeee; border-radius: 3px; width: 100%; }
+  .bar-fill  { height: 5px; border-radius: 3px; }
+  tr.links-row td { padding: 6px 11px; background: #fafafa; border-bottom: 1px solid #eee; }
+  tr.links-row td.j { background: #EBF4FF; }
+  .w-apple { font-size: 13px; font-weight: 600; color: #1a7a45; }
+  .w-bb    { font-size: 13px; font-weight: 600; color: #9a3a00; }
+  .w-note  { display: block; font-size: 10px; margin-top: 4px; line-height: 1.5; color: #bbb; }
+  .w-bb-note { color: #c07040; }
+  .note { font-size: 10px; color: #bbb; margin-top: 16px; line-height: 1.7; }
+  .note strong { color: #888; }
+  .deal { display: inline-block; font-size: 10px; font-weight: 600; background: #e8f7ee; color: #1a7a45; padding: 2px 7px; border-radius: 10px; margin-top: 4px; }
 </style>
 </head>
 <body>
@@ -34,8 +76,8 @@
 <div class="wrap">
 <table>
   <colgroup>
-    <col style="width:100px">
-    <col><col><col><col><col>
+    <col class="lc">
+    <col class="dc"><col class="dc"><col class="dc"><col class="dc"><col class="jc"><col class="dc">
   </colgroup>
   <thead>
     <tr>
@@ -43,11 +85,14 @@
       <th>M1 Air 13"</th>
       <th>Neo 13"</th>
       <th>M2 Air 15"</th>
-      <th class="josh">⭐ Josh's M3 15"</th>
+      <th>M3 Air 15"</th>
+      <th class="j">Josh's MacBook Air M3 15"</th>
       <th>M5 Air 13"</th>
     </tr>
   </thead>
   <tbody>
+
+    <!-- Price -->
     <tr>
       <td>Price</td>
       <td>
@@ -62,110 +107,127 @@
         <span class="price">$790</span>
         <div class="bar-track"><div class="bar-fill" style="width:83%;background:#BA7517"></div></div>
       </td>
-      <td class="josh">
+      <td>
+        <span class="price">$829</span>
+        <div class="bar-track"><div class="bar-fill" style="width:87%;background:#BA7517"></div></div>
+      </td>
+      <td class="j">
         <span class="price">—</span>
       </td>
       <td>
         <span class="price">$949</span>
+        <span class="deal">$150 off Apple.com price</span>
+        <span class="sub">Apple.com sells this model for $1,099. Amazon and Best Buy sell it for $949.</span>
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#BA7517"></div></div>
       </td>
     </tr>
+
+    <!-- Links -->
+    <tr class="links-row">
+      <td></td>
+      <td><a class="buy-link" href="https://www.bestbuy.com/product/geek-squad-certified-refurbished-macbook-air-13-3-laptop-apple-m1-chip-8gb-memory-512gb-ssd-silver/JCQ6HH2YVC" target="_blank">Best Buy ↗</a></td>
+      <td><a class="buy-link" href="https://www.apple.com/shop/buy-mac/macbook-neo/blush-512gb" target="_blank">Apple ↗</a></td>
+      <td><a class="buy-link" href="https://www.bestbuy.com/product/apple-geek-squad-certified-refurbished-macbook-air-15-laptop-m2-chip-8gb-memory-512gb-ssd-midnight/JCQ6HW2FVL" target="_blank">Best Buy ↗</a></td>
+      <td><a class="buy-link" href="https://www.bestbuy.com/product/apple-geek-squad-certified-refurbished-macbook-air-15-inch-laptop-m3-chip-8gb-memory-512gb-ssd-starlight/JCQ6HWFGYQ" target="_blank">Best Buy ↗</a></td>
+      <td class="j">—</td>
+      <td><a class="buy-link" href="https://www.amazon.com/Apple-2026-MacBook-13-inch-Laptop/dp/B0GR1493ZV/" target="_blank">Amazon ↗</a></td>
+    </tr>
+
+    <!-- Condition -->
     <tr>
       <td>Condition</td>
       <td><span class="badge refurb">Refurbished</span><span class="sub">2020</span></td>
       <td><span class="badge new">New</span><span class="sub">2026</span></td>
       <td><span class="badge refurb">Refurbished</span><span class="sub">2023</span></td>
-      <td class="josh"><span class="badge ref">Reference</span><span class="sub">2024</span></td>
+      <td><span class="badge refurb">Refurbished</span><span class="sub">2024</span></td>
+      <td class="j"><span class="badge ref">Reference</span><span class="sub">2024</span></td>
       <td><span class="badge new">New</span><span class="sub">2026</span></td>
     </tr>
+
+    <!-- Screen — 13.0"=50%, 13.3"=60%, 13.6"=65%, 15.3"=100% -->
     <tr>
       <td>Screen size</td>
-      <td>13.3"
-        <div class="bar-track"><div class="bar-fill" style="width:26%;background:#378ADD"></div></div>
-      </td>
-      <td>13.0"
-        <div class="bar-track"><div class="bar-fill" style="width:15%;background:#378ADD"></div></div>
-      </td>
-      <td>15.3"
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD"></div></div>
-      </td>
-      <td class="josh">15.3"
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD"></div></div>
-      </td>
-      <td>13.6"
-        <div class="bar-track"><div class="bar-fill" style="width:37%;background:#378ADD"></div></div>
-      </td>
+      <td>13.3"<div class="bar-track"><div class="bar-fill" style="width:60%;background:#378ADD"></div></div></td>
+      <td>13.0"<div class="bar-track"><div class="bar-fill" style="width:50%;background:#378ADD"></div></div></td>
+      <td>15.3"<div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD"></div></div></td>
+      <td>15.3"<div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD"></div></div></td>
+      <td class="j">15.3"<div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD"></div></div></td>
+      <td>13.6"<div class="bar-track"><div class="bar-fill" style="width:65%;background:#378ADD"></div></div></td>
     </tr>
+
+    <!-- Storage -->
     <tr>
       <td>Storage</td>
-      <td>512 GB
-        <div class="bar-track"><div class="bar-fill" style="width:51%;background:#378ADD"></div></div>
-      </td>
-      <td>512 GB
-        <div class="bar-track"><div class="bar-fill" style="width:51%;background:#378ADD"></div></div>
-      </td>
-      <td>512 GB
-        <div class="bar-track"><div class="bar-fill" style="width:51%;background:#378ADD"></div></div>
-      </td>
-      <td class="josh">~1 TB
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD"></div></div>
-      </td>
-      <td>512 GB
-        <div class="bar-track"><div class="bar-fill" style="width:51%;background:#378ADD"></div></div>
-      </td>
+      <td>512 GB<div class="bar-track"><div class="bar-fill" style="width:51%;background:#378ADD"></div></div></td>
+      <td>512 GB<div class="bar-track"><div class="bar-fill" style="width:51%;background:#378ADD"></div></div></td>
+      <td>512 GB<div class="bar-track"><div class="bar-fill" style="width:51%;background:#378ADD"></div></div></td>
+      <td>512 GB<div class="bar-track"><div class="bar-fill" style="width:51%;background:#378ADD"></div></div></td>
+      <td class="j">~1 TB<div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD"></div></div></td>
+      <td>512 GB<div class="bar-track"><div class="bar-fill" style="width:51%;background:#378ADD"></div></div></td>
     </tr>
+
+    <!-- Battery -->
     <tr>
       <td>Est. battery</td>
-      <td>~10–12 hrs
-        <span class="sub">5yr old battery</span>
-        <div class="bar-track"><div class="bar-fill" style="width:73%;background:#1D9E75"></div></div>
-      </td>
-      <td>~11 hrs
-        <span class="sub">New, smaller</span>
-        <div class="bar-track"><div class="bar-fill" style="width:73%;background:#1D9E75"></div></div>
-      </td>
-      <td>~12–14 hrs
-        <span class="sub">3yr old battery</span>
-        <div class="bar-track"><div class="bar-fill" style="width:87%;background:#1D9E75"></div></div>
-      </td>
-      <td class="josh">~13–14 hrs
-        <span class="sub">~2yr old</span>
-        <div class="bar-track"><div class="bar-fill" style="width:90%;background:#1D9E75"></div></div>
-      </td>
-      <td>~15 hrs
-        <span class="sub">New battery</span>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#1D9E75"></div></div>
-      </td>
+      <td>~10–12 hrs<span class="sub">5yr old battery</span><div class="bar-track"><div class="bar-fill" style="width:67%;background:#1D9E75"></div></div></td>
+      <td>~11 hrs<span class="sub">New, smaller</span><div class="bar-track"><div class="bar-fill" style="width:73%;background:#1D9E75"></div></div></td>
+      <td>~12–14 hrs<span class="sub">3yr old battery</span><div class="bar-track"><div class="bar-fill" style="width:87%;background:#1D9E75"></div></div></td>
+      <td>~12–14 hrs<span class="sub">~2yr old battery</span><div class="bar-track"><div class="bar-fill" style="width:87%;background:#1D9E75"></div></div></td>
+      <td class="j">~13–14 hrs<span class="sub">~2yr old</span><div class="bar-track"><div class="bar-fill" style="width:90%;background:#1D9E75"></div></div></td>
+      <td>~15 hrs<span class="sub">New battery</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:#1D9E75"></div></div></td>
     </tr>
+
+    <!-- Speed -->
     <tr>
       <td>Speed feel</td>
-      <td>Slightly slower than Josh's
-        <div class="bar-track"><div class="bar-fill" style="width:50%;background:#7F77DD"></div></div>
-      </td>
-      <td>Slightly slower than Josh's
-        <div class="bar-track"><div class="bar-fill" style="width:52%;background:#7F77DD"></div></div>
-      </td>
-      <td>Similar to Josh's
-        <div class="bar-track"><div class="bar-fill" style="width:58%;background:#7F77DD"></div></div>
-      </td>
-      <td class="josh">Yours
-        <div class="bar-track"><div class="bar-fill" style="width:68%;background:#7F77DD"></div></div>
-      </td>
-      <td>Faster than Josh's
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:#7F77DD"></div></div>
-      </td>
+      <td>Noticeably slower than Josh's MacBook Air<span class="spec">Apple M1 · GB6: 2,351 / 8,349</span><div class="bar-track"><div class="bar-fill" style="width:43%;background:#7F77DD"></div></div></td>
+      <td>Slightly slower than Josh's MacBook Air<span class="spec">Apple A18 Pro · GB6: 3,487 / 8,693</span><div class="bar-track"><div class="bar-fill" style="width:46%;background:#7F77DD"></div></div></td>
+      <td>Slightly slower than Josh's MacBook Air<span class="spec">Apple M2 · GB6: 2,597 / 9,709</span><div class="bar-track"><div class="bar-fill" style="width:54%;background:#7F77DD"></div></div></td>
+      <td>Same feel as Josh's MacBook Air<span class="spec">Apple M3 · GB6: 2,958 / 11,376</span><div class="bar-track"><div class="bar-fill" style="width:62%;background:#7F77DD"></div></div></td>
+      <td class="j">Josh's MacBook Air<span class="spec">Apple M3 · GB6: 2,958 / 11,376</span><div class="bar-track"><div class="bar-fill" style="width:62%;background:#7F77DD"></div></div></td>
+      <td>Faster than Josh's MacBook Air<span class="spec">Apple M5 · GB6: 4,091 / 16,670</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:#7F77DD"></div></div></td>
     </tr>
+
+    <!-- Warranty -->
     <tr>
       <td>Warranty</td>
-      <td>Best Buy limited</td>
-      <td>AppleCare</td>
-      <td>Best Buy limited</td>
-      <td class="josh">AppleCare</td>
-      <td>AppleCare</td>
+      <td>
+        <span class="w-bb">⚠ Best Buy only</span>
+        <span class="w-note w-bb-note">90 days · no Apple Store access · nearest: Union NJ (Rt. 22 W)</span>
+      </td>
+      <td>
+        <span class="w-apple">✓ Apple 1yr warranty</span>
+        <span class="w-note">Genius Bar · Apple-certified repair · Short Hills Apple Store</span>
+        <span class="w-note" style="color:#1a7a45;margin-top:3px;">AppleCare+ available for extended coverage</span>
+      </td>
+      <td>
+        <span class="w-bb">⚠ Best Buy only</span>
+        <span class="w-note w-bb-note">90 days · no Apple Store access · nearest: Union NJ (Rt. 22 W)</span>
+      </td>
+      <td>
+        <span class="w-bb">⚠ Best Buy only</span>
+        <span class="w-note w-bb-note">90 days · no Apple Store access · nearest: Union NJ (Rt. 22 W)</span>
+      </td>
+      <td class="j">
+        <span class="w-apple">✓ AppleCare (extended)</span>
+        <span class="w-note">Multi-year · full Apple coverage</span>
+      </td>
+      <td>
+        <span class="w-apple">✓ Apple 1yr warranty</span>
+        <span class="w-note">Genius Bar · Apple-certified repair · Short Hills Apple Store</span>
+        <span class="w-note" style="color:#1a7a45;margin-top:3px;">AppleCare+ available for extended coverage</span>
+      </td>
     </tr>
+
   </tbody>
 </table>
 </div>
-<p class="note">Battery hours are estimates based on rated capacity and typical age-related degradation. Actual results vary. Price bar = relative cost (longer = more expensive). All other bars = more is better.</p>
+<p class="note">
+  <strong>Battery:</strong> Estimates based on rated capacity adjusted for age-related degradation on refurbs. Actual varies. Check battery health in Settings on day one.<br>
+  <strong>Price bar:</strong> Longer = more expensive. All other bars: longer = better.<br>
+  <strong>Screen bar:</strong> Scaled for visibility. 13.0" = 50%, 13.3" = 60%, 13.6" = 65%, 15.3" = 100%.<br>
+  <strong>GB6:</strong> Geekbench 6 benchmark. Single-core / multi-core. Higher = faster.<br>
+  <strong>Warranty gap:</strong> Best Buy 90-day warranty means returns to Best Buy only — no Apple Store, no Genius Bar, no Apple technicians. Apple 1yr warranty = walk into Short Hills Apple Store (~7 miles). These are not equivalent.
+</p>
 </body>
 </html>
